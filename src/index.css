@@ -17,3 +17,6 @@ a {
   text-transform: uppercase;
   cursor: pointer;
 }
+*{
+  box-sizing: border-box;
+}
