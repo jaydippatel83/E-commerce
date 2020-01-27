@@ -10,7 +10,9 @@ img.logo {
   height: 70px;
 }
 .options {
-   line-height: 70px;
+    align-items: center;
+   display: flex;
+   justify-content: space-between;
   .option {
     padding: 10px 15px;
     text-transform: uppercase;
