@@ -8,42 +8,60 @@ import CartIcon from '../cart-item/cart-item.component';
 import CartDropDown from '../card-dropdown/card-dropdown.component';
 
 
-const Header = ({ currentUser ,hidden}) => (
-    <div className="header">
-        <div className="logo-option">
-            <Link className="logo-container" to="/">
-                <img src={logo} className="logo" />
+const Header = ({ currentUser, hidden }) => {
+    console.log(currentUser, "currrent");
+
+    return (
+        <div className="header">
+            <div className="logo-option">
+                <Link className="logo-container" to="/">
+                    <img src={logo} className="logo" />
+                </Link>
+            </div>
+            <div className="options">
+                <Link className="option" to="/shop">
+                    shop
             </Link>
-        </div>
-        <div className="options">
-            <Link className="option" to="/shop">
-                shop
+                <Link className="option" to="/contact">
+                    contact
             </Link>
-            <Link className="option" to="/contact">
-                contact
-            </Link>
-            {
-                currentUser ? (
-                    <Link to="/" className="option" onClick={() => auth.signOut()}>
-                        Sign out
+                {
+                    currentUser ? (
+                        <Link to="/" className="option" onClick={() => auth.signOut()}>
+                            Sign out
                     </Link>
-                ) : (
-                        <Link className="option" to="/signin">
-                            Sign In
+                    ) : (
+                            <Link className="option" to="/signin">
+                                Sign In
                     </Link>
-                    )
-            }
-            {/* <Link className="option"> */}
-                <CartIcon /> 
-            {/* </Link> */}
+                        )
+                }
+                {/* <Link className="option"> */}
+                <CartIcon />
+                {/* </Link> */}
+                { 
+                   
 
+                        currentUser ? (
+                            <div className="header-user">
+                                <div className="user-image">
+                                    {/* <img    src={currentUser.photoURL} /> */}
+                                </div>
+                                <p className="user-name">{currentUser.displayName}</p>
+                            </div>
+
+                        ) : '' 
+             
+                }
+    
         </div>
-       {hidden ? null :  <CartDropDown/>}
-    </div>
+            {hidden ? null : <CartDropDown />}
+        </div>
 
-);
+    );
+}
 
-const mapStateToProps = ({user:{currentUser},cart:{hidden}})=> ({
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
     currentUser,
     hidden
 });
