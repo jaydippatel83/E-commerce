@@ -1,10 +1,11 @@
 import React from 'react';
-import CollectionsOverview from '../../components/preview-Collections/preview-collection.component';
+import CollectionOverview from '../../components/collections-overview/collection-overview.component';
 
-const ShopPage = ( ) => (
+const ShopPage = ({ collections }) => (
 
     <div className="shop-page">
-        <CollectionsOverview />
+        <CollectionOverview />
     </div>
 );
+
 export default ShopPage;
