@@ -3,7 +3,7 @@ body {
   font-family:'Open Sans Condensed';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0px 50px;
+  padding: 0px;
 }
 
 code {

@@ -11,59 +11,110 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 
-const Header = ({ currentUser, hidden }) => { 
+const Header = ({ currentUser, hidden }) => {
 
     return (
-        <div className="header">
-            <div className="logo-option">
+        // <div className="header">
+        //     <div className="logo-option">
+        //         <Link className="logo-container" to="/">
+        //             <img src={logo} className="logo" />
+        //         </Link>
+        //     </div>
+        //     <div className="options">
+        //         <Link className="option" to="/shop">
+        //             shop
+        //     </Link>
+        //         <Link className="option" to="/contact">
+        //             contact
+        //     </Link>
+        //         {
+        //             currentUser ? (
+        //                 <Link to="/" className="option" onClick={() => auth.signOut()}>
+        //                     Sign out
+        //             </Link>
+        //             ) : (
+        //                     <Link className="option" to="/signin">
+        //                         Sign In
+        //             </Link>
+        //                 )
+        //         }
+        //         {/* <Link className="option"> */}
+        //         <CartIcon />
+        //         {/* </Link> */}
+        //         {
+
+
+        //             currentUser ? (
+        //                 <div className="header-user">
+        //                     <div className="user-image">
+        //                         {/* <img    src={currentUser.photoURL} /> */}
+        //                     </div>
+        //                     <p className="user-name">{currentUser.displayName}</p>
+        //                 </div>
+
+        //             ) : ''
+
+        //         }
+
+        //     </div>
+        //     {hidden ? null : <CartDropDown />}
+        // </div>
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white  header">
+            <a class="navbar-brand" href="#">
                 <Link className="logo-container" to="/">
                     <img src={logo} className="logo" />
                 </Link>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <Link className="nav-link" to="/shop">
+                            shop
+                            </Link>
+                    </li>
+                    <li class="nav-item">
+                        {
+                            currentUser ? (
+                                <Link to="/" className="nav-link" onClick={() => auth.signOut()}>
+                                    Sign out
+                                </Link>
+                            ) : (
+                                    <Link className="nav-link" to="/signin">
+                                        Sign In
+                                </Link>
+                                )
+                        }
+                    </li>
+                    <li class="nav-item active">
+                        <CartIcon />
+                    </li>
+                    <li className="nav-item"> 
+                        {   currentUser ? (
+                                <div className="nav-link text-success font-weight-bold">
+                                    {/* <div className="user-image"> */}
+                                        {/* <img    src={currentUser.photoURL} /> */}
+                                    {/* </div> */}
+                                    <p className="user-name m-0">{currentUser.displayName}</p>
+                                </div>
+
+                            ) : ''
+
+                        } 
+                      </li> 
+                </ul> 
+                {hidden ? null : <CartDropDown />}
             </div>
-            <div className="options">
-                <Link className="option" to="/shop">
-                    shop
-            </Link>
-                <Link className="option" to="/contact">
-                    contact
-            </Link>
-                {
-                    currentUser ? (
-                        <Link to="/" className="option" onClick={() => auth.signOut()}>
-                            Sign out
-                    </Link>
-                    ) : (
-                            <Link className="option" to="/signin">
-                                Sign In
-                    </Link>
-                        )
-                }
-                {/* <Link className="option"> */}
-                <CartIcon />
-                {/* </Link> */}
-                {
-
-
-                    currentUser ? (
-                        <div className="header-user">
-                            <div className="user-image">
-                                {/* <img    src={currentUser.photoURL} /> */}
-                            </div>
-                            <p className="user-name">{currentUser.displayName}</p>
-                        </div>
-
-                    ) : ''
-
-                }
-
-            </div>
-            {hidden ? null : <CartDropDown />}
-        </div>
+        </nav>
 
     );
 }
 
-const mapStateToProps = createStructuredSelector  ({
+const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,
     hidden: selectCartHidden
 });
