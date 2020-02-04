@@ -47,7 +47,7 @@ class SignUp extends React.Component {
     render() {
         const { displayName, email, password, confirmPassword } = this.state;
         return (
-            <div className="col-lg-6 col-md-6 col-12  margin-t">
+            <div className="col-lg-6 col-md-12 col-12  margin-t">
                 <div className="sign-up">
                     <h2 className="title">I do not have a Account</h2>
                     <span>Sign up with your Email And Password</span>
@@ -84,7 +84,9 @@ class SignUp extends React.Component {
                             onChange={this.handleChange}
                             required
                         />
+                        <div className="text-center">
                         <CustomButton type="submit">Sign Up</CustomButton>
+                           </div> 
                     </form>
                 </div>
             </div>

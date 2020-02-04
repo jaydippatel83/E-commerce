@@ -19,3 +19,16 @@
         flex-direction: column;
     }
 }
+
+@media screen and (max-width:430px){
+    .buttons{
+        display: block;
+        margin: 10px auto !important;
+
+        button{
+            margin: 10px auto;
+            width: 210px;
+
+        }
+    }
+}

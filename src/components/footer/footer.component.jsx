@@ -6,7 +6,7 @@ const FooterPage = ({history} ) => {
     return (
         <div>
             <footer className="page-footer font-small blue-grey lighten-5 "> 
-                <div style={{ backgroundColor: ' #21d192' }}>
+                <div style={{ backgroundColor: ' #eee' }}>
                     <div className="container">
                         <div className="row py-4 d-flex align-items-center">
                             <div className="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
@@ -14,21 +14,21 @@ const FooterPage = ({history} ) => {
                             </div>
                             <div className="col-md-6 col-lg-7 text-center text-md-right">
                                 
-                                <i className="fab fa-facebook-f text-white  mr-4"></i>
+                                <i className="fab fa-facebook-f    mr-4"></i>
                                  
                                 <a className="tw-ic">
-                                    <i className="fab fa-twitter  text-white mr-4" />
+                                    <i className="fab fa-twitter    mr-4" />
                                 </a>
 
                                 <a className="gplus-ic">
-                                    <i className="fab fa-google-plus-g  text-white mr-4" />
+                                    <i className="fab fa-google-plus-g    mr-4" />
                                 </a>
 
                                 <a className="li-ic">
-                                    <i className="fab fa-linkedin-in  text-white mr-4" />
+                                    <i className="fab fa-linkedin-in    mr-4" />
                                 </a>
                                 <a className="ins-ic">
-                                    <i className="fab fa-instagram  text-white" />
+                                    <i className="fab fa-instagram   " />
                                 </a> 
                             </div>  
                         </div> 
@@ -96,7 +96,7 @@ const FooterPage = ({history} ) => {
                         </div> 
                     </div> 
                 </div> 
-                <div className="footer-copyright text-center text-black-50 py-3 bg-secondary text-dark font-weight-bold">© 2020 Copyright:
+                <div className="footer-copyright text-center text-black-50 py-3 bg-secondary text-dark font-weight-bold">© 2020 Copyright :-
                     <a className="text-white" href="#"> CC-Fashion.com</a>
                 </div> 
             </footer>

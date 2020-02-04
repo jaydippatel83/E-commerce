@@ -12,6 +12,7 @@ import {createStructuredSelector} from 'reselect';
 import {selectCurrentUser} from './redux/user/user.selectors';
 import  CheckOut from './pages/checkout/checkout.component';
 import FooterPage from './components/footer/footer.component';
+import ContactUs from './components/contact/contact.component';
 
 class App extends React.Component {
 
@@ -41,6 +42,7 @@ class App extends React.Component {
         <Switch >
           <Route exact path='/' component={HomePage} />
           <Route   path='/shop' component={ShopPage} />
+          <Route   path='/contact' component={ContactUs} />
           <Route exact path='/checkout' component={CheckOut} />
           <Route
             exact
