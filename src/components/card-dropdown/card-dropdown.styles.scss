@@ -26,3 +26,11 @@
         margin-top: auto;
     }
 }
+
+@media screen and (max-width:990px){
+    .cart-dropdown{
+        position:  relative;
+        margin: 0px auto !important;
+        top: 10px !important;
+    }
+}

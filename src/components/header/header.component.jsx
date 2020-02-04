@@ -61,23 +61,23 @@ const Header = ({ currentUser, hidden }) => {
         // </div>
 
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white  header">
-            <a class="navbar-brand" href="#">
-                <Link className="logo-container" to="/">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white  header">
+            
+                <Link className=" navbar-brand logo-container" to="/">
                     <img src={logo} className="logo" />
                 </Link>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+          
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button> 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav ml-auto   text-center">
+                    <li className="nav-item active">
                         <Link className="nav-link" to="/shop">
                             shop
                             </Link>
                     </li>
-                    <li class="nav-item">
+                    <li className="nav-item">
                         {
                             currentUser ? (
                                 <Link to="/" className="nav-link" onClick={() => auth.signOut()}>
@@ -90,8 +90,8 @@ const Header = ({ currentUser, hidden }) => {
                                 )
                         }
                     </li>
-                    <li class="nav-item active">
-                        <CartIcon />
+                    <li className="nav-item active">
+                        <CartIcon className="icon" />
                     </li>
                     <li className="nav-item"> 
                         {   currentUser ? (

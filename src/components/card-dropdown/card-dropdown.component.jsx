@@ -10,7 +10,7 @@ import { withRouter } from 'react-router-dom';
 
 
 const CartDropDown = ({ cartItems, history, dispatch }) => (
-    <div className="cart-dropdown">
+    <div className="cart-dropdown ">
         <div className="cart-items" >
             {
                 cartItems.length ? (

@@ -3,3 +3,10 @@
     justify-content: space-evenly;
     margin: 30px auto; 
 }
+
+@media screen and (max-width:990px){
+    .sign-in{ 
+        display:  block;
+         
+    }
+}

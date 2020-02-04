@@ -4,4 +4,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+@media screen and (max-width:600px){
+    .directory-menu{
+        width: 100%;
+        display: block; 
+    }
+}
  

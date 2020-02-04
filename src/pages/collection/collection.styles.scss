@@ -13,6 +13,41 @@
 
     & .collection-item {
       margin-bottom: 30px;
+      width: 100%;
     }
   }
 }
+
+@media screen and (max-width:700px) and (min-width:601px){
+  .collection-page {
+    display: flex;
+    flex-direction: column;
+  
+    .title {
+      font-size: 38px;
+      margin: 0 auto 30px;
+    }
+    .items {
+      display: grid;
+      grid-template-columns:   1fr 1fr !important ;
+      grid-gap: 10px; 
+    }
+  }
+}
+@media screen and (max-width:990px) { 
+    .items {
+      display: grid;
+      grid-template-columns: 1fr  1fr 1fr !important;
+      grid-gap: 10px; 
+    }
+}
+
+@media screen and (max-width:600px){ 
+  .items {
+    display: grid;
+    grid-template-columns:  1fr !important;
+    grid-gap: 10px; 
+  }
+}
+
+ 

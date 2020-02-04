@@ -5,9 +5,15 @@ import CollectionPage from '../collection/collection.component';
 
 const ShopPage = ({ match }) => (
 
-    <div className="shop-page">
-        <Route exact path={`${match.path}`} component={CollectionOverview} />
-        <Route   path={`${match.path}/:collectionId`} component={CollectionPage} />
+    <div className="container">
+        <div className="row">
+            <div className="col">
+                <div className="shop-page">
+                    <Route exact path={`${match.path}`} component={CollectionOverview} />
+                    <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
+                </div>
+            </div>
+        </div>
     </div>
 );
 

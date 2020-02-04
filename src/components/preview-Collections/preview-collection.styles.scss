@@ -8,6 +8,36 @@
     margin-bottom: 25px;
 }
 .preview{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }
+.collection-item {
+    margin-bottom: 30px;
+    width: 100%;
+  } 
+@media screen and (max-width:700px) and (min-width:601px){
+    .preview {
+        display: grid;
+        grid-template-columns:  1fr 1fr  !important;
+        grid-gap: 10px; 
+      }
+    
+  }
+  @media screen and (max-width:990px) { 
+    .preview {
+        display: grid;
+        grid-template-columns:  1fr 1fr 1fr ;
+        grid-gap: 10px; 
+      }
+  }
+  
+  @media screen and (max-width:600px){ 
+    .preview {
+      display: grid;
+      grid-template-columns:  1fr ;
+      grid-gap: 10px; 
+    }
+  }
+  
+   
