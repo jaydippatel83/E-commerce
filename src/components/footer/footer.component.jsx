@@ -96,8 +96,8 @@ const FooterPage = ({history} ) => {
                         </div> 
                     </div> 
                 </div> 
-                <div className="footer-copyright text-center text-black-50 py-3 bg-secondary text-dark font-weight-bold">© 2020 Copyright :-
-                    <a className="text-white" href="#"> CC-Fashion.com</a>
+                <div className="footer-copyright text-center  py-3  font-weight-bold" style={{backgroundColor:'black',color:'white'}}>© 2020 Copyright :-
+                    <a className="text-secondary" href="#"> CC-Fashion.com</a>
                 </div> 
             </footer>
         </div>
