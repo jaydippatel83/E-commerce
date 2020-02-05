@@ -2,6 +2,7 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-buttons/custom-buttons.component';
 import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
+import { ToastContainer, toast } from 'react-toastify';
 import './sign-up.styles.scss';
 
 class SignUp extends React.Component {
@@ -18,8 +19,10 @@ class SignUp extends React.Component {
         event.preventDefault();
         const { displayName, email, password, confirmPassword } = this.state;
 
-        if (password != confirmPassword) {
-            alert("passwords dont's match");
+        if (password != confirmPassword) { 
+            toast.warn("Passwords dont's match...!", {
+                position: toast.POSITION.TOP_RIGHT
+            });
             return;
         }
         try {
@@ -27,6 +30,9 @@ class SignUp extends React.Component {
                 email,
                 password
             );
+            toast.success("Sign Up Successfully...!", {
+                position: toast.POSITION.TOP_RIGHT
+            });
             await createUserProfileDocument(user, { displayName });
             this.setState({
                 displayName: '',
@@ -34,8 +40,12 @@ class SignUp extends React.Component {
                 password: '',
                 confirmPassword: ''
             });
+           
         }
         catch (error) {
+            toast.error("Something want wrong...!", {
+                position: toast.POSITION.TOP_RIGHT
+            });
             console.error(error);
         }
     }
@@ -56,7 +66,7 @@ class SignUp extends React.Component {
                             type="text"
                             value={displayName}
                             name="displayName"
-                            label="Display Name"
+                            label={displayName===''? 'Display Name' : ' '}
                             onChange={this.handleChange}
                             required
                         />
@@ -64,7 +74,7 @@ class SignUp extends React.Component {
                             type="email"
                             value={email}
                             name="email"
-                            label="Email"
+                            label={email===''? 'Email' : ' '}
                             onChange={this.handleChange}
                             required
                         />
@@ -72,7 +82,7 @@ class SignUp extends React.Component {
                             type="password"
                             value={password}
                             name="password"
-                            label="Password "
+                            label={password===''? 'Password' : ' '}
                             onChange={this.handleChange}
                             required
                         />
@@ -80,7 +90,7 @@ class SignUp extends React.Component {
                             type="password"
                             value={confirmPassword}
                             name="confirmPassword"
-                            label="Confirm password"
+                            label={confirmPassword===''? 'Confirm Password' : ' '}
                             onChange={this.handleChange}
                             required
                         />
