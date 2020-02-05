@@ -31,3 +31,14 @@
     }
   }
 }
+
+.react-confirm-alert-overlay {  
+  background: rgba(0,0,0,0.7);  
+}
+
+.react-confirm-alert-button-group > button { 
+  padding: 10px 40px; 
+}
+.remove-button{
+  cursor: pointer;
+}
