@@ -42,3 +42,14 @@
 .remove-button{
   cursor: pointer;
 }
+.react-confirm-alert-body{
+  min-width: 200px;
+  width: auto;
+}
+
+@media screen and (min-width:600px){
+  .react-confirm-alert-body{
+    min-width: auto;
+    width:100% !important;
+  }
+}
